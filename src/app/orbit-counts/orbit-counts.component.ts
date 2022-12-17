@@ -27,5 +27,38 @@ export class OrbitCountsComponent implements OnInit {
 	return count;
  }
 
+ 	// findUnique(arr: any) : any {
+	// 	let distinct = []
+	// 	for (let i=0; i<arr.length; i++){
+	// 		distinct.push(arr[i].type)
+	// 	  }
+	// 	console.log(distinct.sort())
+		
+	// 	let unique = [];
+	// 	for (let i = 0; i < distinct.length; i++) {
+	// 		if (distinct[i] !== distinct[i+1]) {
+	// 			unique.push(distinct[i]);
+	// 		}
+	// 		console.log(unique)
+	// 	}
+	// 	return unique;
+	// }
 
-}
+	findUnique(satelliltes: any) : any {
+		let distinct = []
+		for (let i=0; i<this.satellites.length; i++){
+			distinct.push(this.satellites[i].type)
+		  }
+		console.log(distinct.sort())
+		
+		let unique = [];
+		for (let i = 0; i < distinct.length; i++) {
+			if (distinct[i] !== distinct[i+1]) {
+				unique.push(distinct[i]);
+			}
+			console.log(unique)
+		}
+		return unique;
+	}
+
+};
